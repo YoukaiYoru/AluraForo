@@ -1,6 +1,6 @@
-CREATE TABLE Curso (
+CREATE TABLE curso (
                        id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                       nombre VARCHAR(255) NOT NULL,
+                       titulo VARCHAR(255) NOT NULL,
                        categoria VARCHAR(255) NOT NULL
 );
 
@@ -40,10 +40,10 @@ CREATE TABLE Respuesta (
                            FOREIGN KEY (autor_id) REFERENCES Usuario(id)
 );
 
-INSERT INTO Curso (nombre, categoria) VALUES ('Curso de Java', 'Programación');
+INSERT INTO Curso (titulo, categoria) VALUES ('Curso de Java', 'Programación');
 INSERT INTO Perfil (nombre) VALUES ('Administrador');
 INSERT INTO Usuario_Perfil (usuario_id, perfil_id) VALUES (1, 1); -- Asigna el perfil con id 1 al usuario con id 1
-INSERT INTO Topico (titulo, mensaje, status, autor_id, curso_id) VALUES ('Nuevo Tópico', 'Este es el mensaje del tópico', 'ABIERTO', 1, 1);
+INSERT INTO Topico (titulo, mensaje, status, autor_id, curso_id) VALUES ('Nuevo Tópico', 'Este es el mensaje del tópico', 'ACTIVO', 1, 1);
 INSERT INTO Respuesta (mensaje, topico_id, autor_id) VALUES ('Esta es una respuesta al tópico', 1, 1);
 
 

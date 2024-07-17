@@ -1,2 +1,6 @@
-package org.backend.foro.challengeforo.domain.topico;public enum Status {
+package org.backend.foro.challengeforo.domain.topico;
+
+public enum Status {
+    ACTIVO,
+    REVISADO
 }
